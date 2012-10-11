@@ -27,12 +27,17 @@ group :development, :test do
   gem "factory_girl_rails"
   gem "guard-rspec"
   gem "rspec-rails"
+  gem 'spork', "> 0.9.0.rc"	
+  gem 'guard-spork'
+  gem 'libnotify'
+  gem 'rb-inotify'
 end
 
 group :test do
   gem "capybara"
   gem "database_cleaner"
   gem "faker"
+  gem 'launchy'
 end
 
 
