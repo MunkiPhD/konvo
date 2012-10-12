@@ -25,6 +25,7 @@ end
 
 
 group :development, :test do
+  gem "annotate"
   gem "factory_girl_rails"
   gem "guard-rspec"
   gem "rspec-rails"

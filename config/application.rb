@@ -71,5 +71,11 @@ module Konvo
 
       g.fixture_replacement :factory_girl, dir: "spec/factories"
     end
+
+    # default method of signing out is :delete
+    config.sign_out_via = Rails.env.test? ? :get : :delete
+
+    # prevent logging of paswords to the log
+    config.filter_parameters += [:password, :password_confirmation]
   end
 end
