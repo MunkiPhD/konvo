@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name
   # attr_accessible :title, :body
 
-  validates_uniqueness_of :email, :case_sensitive => false
-  validates :name, :presence => true, :allow_blank => false, :allow_nil => false, :length => { :maximum => 25 }, :case_sensitive => false
+  validates_uniqueness_of :email
+  validates :name, :presence => true, :allow_blank => false, :allow_nil => false, :length => { :maximum => 25 }
 end
